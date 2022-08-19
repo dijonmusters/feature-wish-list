@@ -56,7 +56,7 @@ const FeaturePage = () => {
       .on(
         "postgres_changes",
         { event: "INSERT", schema: "public", table: "features" },
-        (payload) => console.log(payload)
+        (payload: any) => console.log(payload)
       )
       .subscribe();
   }, []);
